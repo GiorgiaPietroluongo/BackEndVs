@@ -82,19 +82,19 @@ function UserInput(){
             <input type="text" id="userName"/>
             </div>
             <div className="body">
-                <label>Sobrenome:</label>
+                <label>Produtos:</label>
             <input type="text" id="userProducts"/>
             </div>
             <div className="body">
-                <label>Telefone:</label>
+                <label>Compra final:</label>
             <input type="text" id="userfinishedSale"/>
             </div>
             <div className="body">
-                <label>Endereço:</label>
+                <label>Desconto:</label>
             <input type="text" id="userDiscount"/>
             </div>
             <div className="body">
-                <label>E-mail:</label>
+                <label>Compra:</label>
             <input type="text" id="userSale"/>
             </div>
             
