@@ -3,22 +3,21 @@ import'./UserInput.css';
 import  axios from "axios";
 
 
-async function userData(){
+ function userData(){
     var userNameInput = document.getElementById("userName")as HTMLInputElement || null;
-    var userLastNameInput = document.getElementById("userLastName")as HTMLInputElement || null;
-    var userPhoneInput = document.getElementById("userPhone")as HTMLInputElement || null;
-    var userAddressInput = document.getElementById("userAddress")as HTMLInputElement || null;
-    var userEmailInput = document.getElementById("userEmail")as HTMLInputElement || null;
-    var userCpfInput = document.getElementById("userCpf")as HTMLInputElement || null;
+    var userProductsInput = document.getElementById("userProducts")as HTMLInputElement || null;
+    var userFinishedSaleInput = document.getElementById("userfinishedSale")as HTMLInputElement || null;
+    var userDiscountInput = document.getElementById("userDiscount")as HTMLInputElement || null;
+    var userSaleInput = document.getElementById("userSale")as HTMLInputElement || null;
     var newDiv = document.getElementById("newDiv")as HTMLDivElement;
-    var vendaUrl = "http://localhost:3000/api/sales";
+    var vendaUrl = "http://localhost:4000/api/sales";
     var userDataJson = {
 
         "name": userNameInput.value.toString(),
-        "products": userLastNameInput.value.toString(),
-        "finishedSales": userPhoneInput.value.toString(),
-        "discount": userAddressInput.value.toString(),
-        "Sale": userEmailInput.value.toString()
+        "products": userProductsInput.value.toString(),
+        "finishedSales": userFinishedSaleInput.value.toString(),
+        "discount": userDiscountInput.value.toString(),
+        "Sale": userSaleInput.value.toString()
      
     }
 
@@ -42,22 +41,37 @@ async function userData(){
     //     CPF: ${userCpfInput.value} 
     //     </div>
     // `;
-
+    
     // axios.post(salesPersonUrl,userDataJson )
     // .then((response)=>{
     //     newDiv.innerHTML = `${response.data}`;
     // })
 
-    await axios.get(vendaUrl, 
-       { headers:{
-            "Content-type":"application/json",
-            Accept:"application/json"
-             }
-         }
+     axios.get(vendaUrl, 
+        // { 
+        //  headers:{
+
+        //     "Access-Control-Allow-Origin": "*",
+        //     "Access-Control-Allow-Headers": "Authorization", 
+        //     "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
+        //     "Content-Type": "application/json;charset=UTF-8"
+        //     // 'Access-Control-Allow-Origin' : '*',
+        //     // 'Connection': "keep-alive",
+        //     // 'Sec-fetch-dest':"no-cors",
+        //     // 'Mode': 'no-cors',
+        //     // "sec-fetch-mode": "cors",
+        //     // "sec-fetch-dest": "empty",
+        //     // "sec-fetch-site": "cross-site",
+
+
+
+         // 'Access-Control=Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTION'
+        //       },
+        //   }
      ).then ((response) =>{
-        newDiv.innerHTML = `${response.data}`;
+       newDiv.innerHTML = `${response.data}`;
     })
-}
+ }
 
 
 function UserInput(){
@@ -69,24 +83,21 @@ function UserInput(){
             </div>
             <div className="body">
                 <label>Sobrenome:</label>
-            <input type="text" id="userLastName"/>
+            <input type="text" id="userProducts"/>
             </div>
             <div className="body">
                 <label>Telefone:</label>
-            <input type="text" id="userPhone"/>
+            <input type="text" id="userfinishedSale"/>
             </div>
             <div className="body">
                 <label>Endereço:</label>
-            <input type="text" id="userAddress"/>
+            <input type="text" id="userDiscount"/>
             </div>
             <div className="body">
                 <label>E-mail:</label>
-            <input type="text" id="userEmail"/>
+            <input type="text" id="userSale"/>
             </div>
-            <div className="body">
-                <label>CPF:</label>
-            <input type="text" id="userCpf"/>
-            </div >
+            
             <button id="sendBtn" onClick={userData}>Enviar</button>
             <br /> <br />
 
