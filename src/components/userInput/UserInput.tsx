@@ -50,8 +50,28 @@ import  axios from "axios";
 
      axios.get(vendaUrl)
      .then ((response) =>{
-        console.log (response);
-       newDiv.innerHTML = `${response.data.user}`;
+        console.log (response.data);
+       newDiv.innerHTML = `
+       <div>
+       Nome: ${response.data.user} 
+       </div>
+       <div>
+       Produtos: ${response.data.products} 
+       </div>
+       <div>
+       Compra final: ${response.data.finishedSales} 
+       </div>
+       <div>
+       Desconto: ${response.data.user.discount} 
+       </div>
+       <div>
+       Compra: ${response.data.user.Sale} 
+       </div>
+       `;
+       
+      
+       
+       
     })
  }
 
