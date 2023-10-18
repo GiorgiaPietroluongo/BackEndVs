@@ -10,7 +10,8 @@ import  axios from "axios";
     var userDiscountInput = document.getElementById("userDiscount")as HTMLInputElement || null;
     var userSaleInput = document.getElementById("userSale")as HTMLInputElement || null;
     var newDiv = document.getElementById("newDiv")as HTMLDivElement;
-    var vendaUrl = "http://localhost:4000/api/sales";
+    var vendaUrl = "http://localhost:4000/api/venda";
+
     var userDataJson = {
 
         "name": userNameInput.value.toString(),
@@ -47,29 +48,10 @@ import  axios from "axios";
     //     newDiv.innerHTML = `${response.data}`;
     // })
 
-     axios.get(vendaUrl, 
-        // { 
-        //  headers:{
-
-        //     "Access-Control-Allow-Origin": "*",
-        //     "Access-Control-Allow-Headers": "Authorization", 
-        //     "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
-        //     "Content-Type": "application/json;charset=UTF-8"
-        //     // 'Access-Control-Allow-Origin' : '*',
-        //     // 'Connection': "keep-alive",
-        //     // 'Sec-fetch-dest':"no-cors",
-        //     // 'Mode': 'no-cors',
-        //     // "sec-fetch-mode": "cors",
-        //     // "sec-fetch-dest": "empty",
-        //     // "sec-fetch-site": "cross-site",
-
-
-
-         // 'Access-Control=Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTION'
-        //       },
-        //   }
-     ).then ((response) =>{
-       newDiv.innerHTML = `${response.data}`;
+     axios.get(vendaUrl)
+     .then ((response) =>{
+        console.log (response);
+       newDiv.innerHTML = `${response.data.user}`;
     })
  }
 
@@ -98,10 +80,12 @@ function UserInput(){
             <input type="text" id="userSale"/>
             </div>
             
-            <button id="sendBtn" onClick={userData}>Enviar</button>
+            <button id="sendBtn" onClick={userData}>Obter</button>
             <br /> <br />
 
-            <div id="newDiv"></div>
+            <div id="newDiv">
+
+            </div>
         </div>
     )
 }
