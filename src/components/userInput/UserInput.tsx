@@ -55,36 +55,55 @@ import { json } from "stream/consumers";
         const dataVenda: Record<string, {user: string, products: string,
              finishedSale: string, discount:string, Sale:string}> =
              response.data;
+                //
+             const dataVendaArray = Object.entries(dataVenda).map(
+                ([key, value])=>({
+                    key,
+                    ...value
+                }));
+                console.log(dataVendaArray[1]);
+                //Mesma coisa 
 
-             const dataVendaArray = Object.entries(dataVenda);
+                // myFunction(){
+                //   return textSpanEnd;
+                // }
+
+                // () => myFunction(){
+
+                // }
+                //
+
+
+
+
         // var teste =[];
        
-
+        
         // teste = Object.keys(response.data);
         // console.log (teste.map((response: any) =>{
         //     return response;
         // }));
 
-        var teste = response.data;
-        console.log(teste.map((ola:any)=>{
-            const {user}= ola;
-        }));
+        // var teste = response.data;
+        // console.log(teste.map((ola:any)=>{
+        //     const {user}= ola;
+        // }));
 
         newDiv.innerHTML = `
         <div>
-        Nome: ${response.data.user}
+        Nome: ${dataVendaArray[1].user}
         </div>
         <div>
-        Produtos: ${response.data.products} 
+        Produtos: ${dataVendaArray[1].products} 
         </div>
         <div>
-        Compra final: ${response.data.finishedSale} 
+        Compra final: ${dataVendaArray[1].finishedSale} 
         </div>
         <div>
-        Desconto: ${response.data.discount}
+        Desconto: ${dataVendaArray[1].discount}
         </div>
         <div>
-        Compra: ${response.data.Sale} 
+        Compra: ${dataVendaArray[1].Sale} 
         </div>`;
     }).catch((error) => {
       
