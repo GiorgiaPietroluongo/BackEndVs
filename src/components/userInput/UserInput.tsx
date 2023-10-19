@@ -62,10 +62,11 @@ import { json } from "stream/consumers";
         var teste = response.data;
         console.log(teste.map((ola:any)=>{
             const {user}= ola;
-        }))
+        }));
+        
         newDiv.innerHTML = `
         <div>
-        Nome: ${JSON.parse(response.data)} 
+        Nome: ${response.data.user}
         </div>
         <div>
         Produtos: ${response.data.products} 
