@@ -55,13 +55,27 @@ import { json } from "stream/consumers";
         const dataVenda: Record<string, {user: string, products: string,
              finishedSale: string, discount:string, Sale:string}> =
              response.data;
-                //
+               
              const dataVendaArray = Object.entries(dataVenda).map(
                 ([key, value])=>({
                     key,
                     ...value
                 }));
                 console.log(dataVendaArray[1]);
+
+                dataVendaArray.forEach((i)=>{
+                    console.log("Nome: "+i.user);
+                   
+                    console.log("Produtos: "+ i.products);
+                   
+                    console.log("Compra final: "+i.finishedSale);
+                   
+                    console.log("Desconto:"+i.discount);
+                   
+                    console.log("Venda: "+i.Sale);
+                });
+
+                //
                 //Mesma coisa 
 
                 // myFunction(){
@@ -91,23 +105,110 @@ import { json } from "stream/consumers";
 
         newDiv.innerHTML = `
         <div>
-        Nome: ${dataVendaArray[1].user}
+            Nome: ${dataVendaArray[0].user}
         </div>
+        
         <div>
-        Produtos: ${dataVendaArray[1].products} 
+            Produtos: ${dataVendaArray[0].products} 
         </div>
+       
         <div>
-        Compra final: ${dataVendaArray[1].finishedSale} 
+            Compra final: ${dataVendaArray[0].finishedSale} 
         </div>
+        
         <div>
-        Desconto: ${dataVendaArray[1].discount}
+            Desconto: ${dataVendaArray[0].discount}
         </div>
+       
         <div>
-        Compra: ${dataVendaArray[1].Sale} 
-        </div>`;
+            Compra: ${dataVendaArray[0].Sale} 
+        </div>
+        <br />
+        <div>
+            Nome: ${dataVendaArray[1].user}
+         </div>
+        
+        
+         <div>
+            Produtos: ${dataVendaArray[1].products} 
+        </div>
+        
+        <div>
+            Compra final: ${dataVendaArray[1].finishedSale} 
+        </div>
+       
+        <div>
+            Desconto: ${dataVendaArray[1].discount}
+        </div>
+       
+        <div>
+            Compra: ${dataVendaArray[1].Sale} 
+        </div>
+        <br />
+        <div>
+            Nome: ${dataVendaArray[2].user}
+        </div>
+        
+        <div>
+            Produtos: ${dataVendaArray[2].products} 
+        </div>
+       
+       
+        <div>
+            Compra final: ${dataVendaArray[2].finishedSale} 
+        </div>
+       
+        <div>
+            Desconto: ${dataVendaArray[2].discount}
+        </div>
+        
+        <div>
+            Compra: ${dataVendaArray[2].Sale} 
+        </div>
+        <br />
+        <div>
+            Nome: ${dataVendaArray[3].user}
+        </div>
+       
+        <div>
+            Produtos: ${dataVendaArray[3].products} 
+        </div>
+       
+        <div>
+            Compra final: ${dataVendaArray[3].finishedSale} 
+        </div>
+        
+        <div>
+            Desconto: ${dataVendaArray[3].discount}
+        </div>
+       
+        <div>
+            Compra: ${dataVendaArray[3].Sale} 
+        </div>
+        <br />
+        <div>
+            Nome: ${dataVendaArray[4].user}
+        </div>
+       
+        <div>
+            Produtos: ${dataVendaArray[4].products} 
+        </div>
+        
+        <div>
+            Compra final: ${dataVendaArray[4].finishedSale} 
+        </div>
+        
+        <div>
+            Desconto: ${dataVendaArray[4].discount}
+        </div>
+        
+        <div>
+            Compra: ${dataVendaArray[4].Sale} 
+        </div>
+        `;
     }).catch((error) => {
       
-    console.error("Erro na requisição:", error);
+    console.log("Erro na requisição:", error);
        
     });
  }
