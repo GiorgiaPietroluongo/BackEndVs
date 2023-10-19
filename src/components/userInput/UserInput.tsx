@@ -51,6 +51,12 @@ import { json } from "stream/consumers";
 
      axios.get(vendaUrl)
      .then ((response) =>{
+
+        const dataVenda: Record<string, {user: string, products: string,
+             finishedSale: string, discount:string, Sale:string}> =
+             response.data;
+
+             const dataVendaArray = Object.entries(dataVenda);
         // var teste =[];
        
 
@@ -63,7 +69,7 @@ import { json } from "stream/consumers";
         console.log(teste.map((ola:any)=>{
             const {user}= ola;
         }));
-        
+
         newDiv.innerHTML = `
         <div>
         Nome: ${response.data.user}
