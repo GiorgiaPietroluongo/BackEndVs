@@ -1,6 +1,7 @@
 import React from "react";
 import'./UserInput.css';
 import  axios from "axios";
+import { json } from "stream/consumers";
 
 
  function userData(){
@@ -14,11 +15,11 @@ import  axios from "axios";
 
     var userDataJson = {
 
-        "name": userNameInput.value.toString(),
-        "products": userProductsInput.value.toString(),
+        "user": userNameInput.value,
+        "products": userProductsInput.value,
         "finishedSales": userFinishedSaleInput.value.toString(),
         "discount": userDiscountInput.value.toString(),
-        "Sale": userSaleInput.value.toString()
+        "Sale": userSaleInput.value
      
     }
 
@@ -50,29 +51,39 @@ import  axios from "axios";
 
      axios.get(vendaUrl)
      .then ((response) =>{
-        console.log (response.data);
-       newDiv.innerHTML = `
-       <div>
-       Nome: ${response.data.user} 
-       </div>
-       <div>
-       Produtos: ${response.data.products} 
-       </div>
-       <div>
-       Compra final: ${response.data.finishedSales} 
-       </div>
-       <div>
-       Desconto: ${response.data.user.discount} 
-       </div>
-       <div>
-       Compra: ${response.data.user.Sale} 
-       </div>
-       `;
+        // var teste =[];
        
+
+        // teste = Object.keys(response.data);
+        // console.log (teste.map((response: any) =>{
+        //     return response;
+        // }));
+
+        var teste = response.data;
+        console.log(teste.map((ola:any)=>{
+            const {user}= ola;
+        }))
+        newDiv.innerHTML = `
+        <div>
+        Nome: ${JSON.parse(response.data)} 
+        </div>
+        <div>
+        Produtos: ${response.data.products} 
+        </div>
+        <div>
+        Compra final: ${response.data.finishedSale} 
+        </div>
+        <div>
+        Desconto: ${response.data.discount}
+        </div>
+        <div>
+        Compra: ${response.data.Sale} 
+        </div>`;
+    }).catch((error) => {
       
+    console.error("Erro na requisição:", error);
        
-       
-    })
+    });
  }
 
 
