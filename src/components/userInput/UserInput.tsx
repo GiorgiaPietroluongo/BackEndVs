@@ -4,7 +4,7 @@ import  axios from "axios";
 import { json } from "stream/consumers";
 
 
- function userData(){
+ async function userDataGet(){
     var userNameInput = document.getElementById("userName")as HTMLInputElement || null;
     var userProductsInput = document.getElementById("userProducts")as HTMLInputElement || null;
     var userFinishedSaleInput = document.getElementById("userfinishedSale")as HTMLInputElement || null;
@@ -49,13 +49,13 @@ import { json } from "stream/consumers";
     //     newDiv.innerHTML = `${response.data}`;
     // })
 
-     axios.get(vendaUrl)
+     await axios.get(vendaUrl)
      .then ((response) =>{
 
         const dataVenda: Record<string, {user: string, products: string,
              finishedSale: string, discount:string, Sale:string}> =
              response.data;
-               
+                
              const dataVendaArray = Object.entries(dataVenda).map(
                 ([key, value])=>({
                     key,
@@ -72,7 +72,7 @@ import { json } from "stream/consumers";
                    
                     console.log("Desconto:"+i.discount);
                    
-                    console.log("Venda: "+i.Sale);
+                    console.log("Venda: "+i.Sale[1],[2],[3]);
                 });
 
                 //
@@ -213,6 +213,32 @@ import { json } from "stream/consumers";
     });
  }
 
+ async function userDataPost(){
+    const vendaUrl = "http://localhost:4000/api/venda";
+
+    var vendaJson = {
+    "user":"Gi",
+    "products":"Várias coisas",
+    "finishedSale":true,
+    "discount":11,
+    "Sale": "Compras"
+    }
+    await axios.post(vendaUrl, vendaJson, 
+        {
+            headers : {
+                "Content-Type":"application/json",
+
+            }
+        })
+    .then((response) =>{
+        console.log(response);
+    }).catch((error) => {
+      
+    console.log("Erro na requisição:", error);
+       
+    });
+ }
+
 
 function UserInput(){
     return(
@@ -238,7 +264,8 @@ function UserInput(){
             <input type="text" id="userSale"/>
             </div>
             
-            <button id="sendBtn" onClick={userData}>Obter</button>
+            <button id="sendBtn" onClick={userDataGet}>Obter</button>
+            <button id="sendBtn" onClick={userDataPost}>Enviar</button>
             <br /> <br />
 
             <div id="newDiv">
