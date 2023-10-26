@@ -1,10 +1,11 @@
 import React from "react";
-import'./UserInput.css';
-import  axios from "axios";
+ import'./UserInput.css';
+ import  axios from "axios";
 import { json } from "stream/consumers";
 
 
  async function userDataGet(){
+
     var userNameInput = document.getElementById("userName")as HTMLInputElement || null;
     var userProductsInput = document.getElementById("userProducts")as HTMLInputElement || null;
     var userFinishedSaleInput = document.getElementById("userfinishedSale")as HTMLInputElement || null;
@@ -14,14 +15,13 @@ import { json } from "stream/consumers";
     var vendaUrl = "http://localhost:4000/api/venda";
 
     var userDataJson = {
-
-        "user": userNameInput.value,
-        "products": userProductsInput.value,
-        "finishedSales": userFinishedSaleInput.value.toString(),
-        "discount": userDiscountInput.value.toString(),
-        "Sale": userSaleInput.value
-     
+        "user" : userNameInput.value.toString(),
+        "products" : userProductsInput.value.toString(),
+        "finishedSale": userFinishedSaleInput.value.toString(),
+        "discount" : userDiscountInput.value.toString(),
+        "Sale" : userSaleInput.value.toString()
     }
+
 
     // newDiv.innerHTML = `
     //     <div>
@@ -225,18 +225,24 @@ import { json } from "stream/consumers";
     }
     await axios.post(vendaUrl, vendaJson, 
         {
+            withCredentials: true,
             headers : {
-                "Content-Type":"application/json",
+                "Content-Type": "application/json",
+                // "Acess-Control-Allow-Origin": "*"
 
-            }
+            },
+            maxRedirects:0,
+  
+
+         } )
+        .then((response) =>{
+            console.log(response)
+
         })
-    .then((response) =>{
-        console.log(response);
-    }).catch((error) => {
-      
-    console.log("Erro na requisição:", error);
-       
-    });
+        .catch((error) => {
+            console.log(error);
+
+            });
  }
 
 
@@ -273,6 +279,6 @@ function UserInput(){
             </div>
         </div>
     )
-}
+ }
 
 export default UserInput;
