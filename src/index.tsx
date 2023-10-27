@@ -7,8 +7,10 @@ import reportWebVitals from './reportWebVitals';
 //  import UserInput from './components/userInput/UserInput'
 // import Telefone from './components/telefone/Telefone';
 // import NavBar from './components/navbar/NavBar';
-import Imagem from './components/mainImagem/Imagem';
+import Imagem from './components/mainImagemVenda/ImagemVenda';
 // import api from './services/api';
+import NavBar from './components/navbar/NavBar';
+import ImagemEstoque from './components/mainImagemEstoque/ImagemEstoque';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,8 +18,12 @@ const root = ReactDOM.createRoot(
 root.render(
   // <React.StrictMode>
     
-   
+<>
+<NavBar/>
 <Imagem/>
+<ImagemEstoque/>
+
+</>
 
   
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 
+
 async function getVenda(divId : HTMLDivElement){
 
 const vendaUrl = "http://localhost:4000/api/venda";
@@ -33,42 +34,41 @@ await axios.get(vendaUrl)
 
                 <div class="produtos">
                    <img src= ${dados.user} alt =""/>
+                   <label>
+                   Samsung Galaxy s5 - 2015
+                   </label>
                 </div>
 
                         
                 <div class="home">
                 <img src=  ${dados.products} alt =""/> 
+                <label>
+                Nokia Lumia 1320
+                </label>
                 </div>
 
                 <div class="shop">
-                <img src=  ${dados.finishedSale} alt =""/>    
+                <img src=  ${dados.finishedSale} alt =""/> 
+                <label>
+                LG Leon 2015
+                </label>   
                 </div>
 
                 <div class="products">
-                <img src= ${dados.discount}  alt =""/>      
-                /div>
+                <img src= ${dados.discount}  alt =""/>  
+                <label>
+                Sony Microsoft
+                </label>    
+                </div>
 
                 <div class="checkout">
-                <img src= ${dados.Sale}  alt =""/>      
+                <img src= ${dados.Sale}  alt =""/> 
+                <label>
+                Iphone 6
+                </label>     
                 </div>
 
-                <div class="category">
-                    <label>Category</label>
-                </div>
-
-                <div class="outhers">
-                    <label>Outhers</label>
-                </div>
-
-                <div class="contacts">
-                    <label>Contacts</label>
-                </div>
-
-                        
-                <div class="Botão">
-                            
-                    <button> Login</button>
-                </div>
+           
 
 
                 </div>
@@ -147,7 +147,7 @@ await axios.get(vendaUrl)
 
 }
 
-function postVenda(){
+function postVenda(): void{
     console.log("teste")
 }
 

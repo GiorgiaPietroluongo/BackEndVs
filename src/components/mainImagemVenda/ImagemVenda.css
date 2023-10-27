@@ -1,0 +1,123 @@
+.FlexPai{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-direction: row;
+    
+}
+
+.produtos{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height:300px;
+    margin: 10px;
+    padding: 30px;
+    border: 5px solid rgb(54, 54, 54);
+    border-radius: 5px;
+
+
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height:300px;
+    margin: 10px;
+    padding: 30px;
+    border: 5px solid rgb(54, 54, 54);
+    border-radius: 5px;
+}
+
+.shop{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height:300px;
+    margin: 10px;
+    padding: 30px;
+    border: 5px solid rgb(54, 54, 54);
+    border-radius: 5px;   
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height:300px;
+    margin: 10px;
+    padding: 30px;
+    border: 5px solid rgb(54, 54, 54);
+    border-radius: 5px;
+}
+
+.checkout{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height:300px;
+    margin: 10px;
+    padding: 30px;
+    border: 5px solid rgb(54, 54, 54);
+    border-radius: 5px;
+}
+
+.category{
+    word-spacing: 20px;
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 200px 100px 200px; /* Margens superior, direita, inferior, esquerda */
+    font-weight: bold;
+    
+}
+
+.outhers{
+    word-spacing: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 200px 100px 200px; /* Margens superior, direita, inferior, esquerda */
+    font-weight: bold;
+   
+}
+
+.contacts{
+    word-spacing: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 200px 100px 200px; /* Margens superior, direita, inferior, esquerda */
+    font-weight: bold;
+   
+}
+
+.Botão{
+    
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 200px 100px 200px; /* Margens superior, direita, inferior, esquerda */
+    font-weight: bold;
+   
+}
+
+ 
