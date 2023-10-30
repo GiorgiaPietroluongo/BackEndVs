@@ -10,7 +10,15 @@ import reportWebVitals from './reportWebVitals';
 import Imagem from './components/mainImagemVenda/ImagemVenda';
 // import api from './services/api';
 import NavBar from './components/navbar/NavBar';
-import ImagemEstoque from './components/mainImagemEstoque/ImagemEstoque';
+// import ImagemEstoque from './components/mainImagemEstoque/ImagemEstoque';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import UserInput from './components/userInputVenda/UserInput';
+import Mensagem from './components/mensagens/Mensagem';
+import CadastroCliente from './components/cadastroCliente/CadastroCliente';
+import CadastroVendedor from './components/cadastroVendedor/CadastroVendedor';
+import CadastroProdutos from './components/cadastroProdutos/CadastroProdutos';
+// import NavBarEstoque from './components/navBarEstoque/NavBarEstoque';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,11 +27,25 @@ root.render(
   // <React.StrictMode>
     
 <>
-<NavBar/>
-<Imagem/>
-<ImagemEstoque/>
+    {/* <NavBar/> */}
+    <BrowserRouter basename='/pi'>
+      <Routes>
+        
+      <Route path='/' element={<NavBar/>}/>
+        <Route path='/sobre' element={<Imagem/>}/>
+        <Route path='/cadastroCliente' element={<CadastroCliente/>}/>
+        <Route path='/cadastroVendedor' element={<CadastroVendedor/>}/>
+        <Route path='/cadastroProdutos' element={<CadastroProdutos/>}/>
+        <Route path='*' element={<Mensagem/>}/>
+       
+      
+      </Routes>
+    </BrowserRouter>
+   
+    {/* <Imagem/>
+    <ImagemEstoque/> */}
 
-</>
+</>     
 
   
 

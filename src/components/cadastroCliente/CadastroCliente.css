@@ -1,0 +1,115 @@
+.body{
+    background-color: rgb(247, 247, 247);
+}
+
+.nome{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.inputNome{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px;
+    
+}
+
+.inputLastName{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.inputGenero{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.datanasc{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 30px;
+}
+
+.inputData{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.inputEmail{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.inputEstado{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px; 
+}
+
+
+.cpf{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.inputCpf{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 5px;
+    padding: 5px; 
+}
+
+.telefone{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.inputPhone{
+    display: flex;
+    flex-direction: row;
+    width: 20px;
+    height:20px;
+    margin: 10px;
+    padding: 5px;
+   
+}

@@ -1,11 +1,17 @@
 import React from "react";
 import './NavBar.css';
+ import Imagem from '../mainImagemVenda/ImagemVenda';
+import { Link } from 'react-router-dom';
+
 
 
 function NavBar(){
 
     return(
+        
+
         <div className="FlexPai">
+      
 
             <div className="category">
                 <label>Category</label>
@@ -59,6 +65,20 @@ function NavBar(){
                 <label>
                 Iphone 6
                 </label>     
+                </div>
+
+                <div>
+                    <Link to={'/cadastroCliente'}>
+                        Cliente
+                    </Link>
+                    <Imagem/>
+                   <Link to={'/cadastroVendedor'}>
+                    Vendedor
+                   </Link>
+                   <Link to={'/cadastroProdutos'}>
+                    produtos
+                   </Link>
+                    
                 </div>
 
 
