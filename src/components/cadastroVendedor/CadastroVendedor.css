@@ -1,0 +1,79 @@
+.body{
+    background-color: rgb(247, 247, 247);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.nome{
+    text-align: center;
+}
+
+.inputNome{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.codigoVend{
+    text-align: center;
+}
+
+.inputCodVend{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.horarioEnt{
+    text-align: center;
+}
+
+.inputHorarioEnt{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.horarioSai{
+    text-align: center;
+
+}
+
+.inputHorarioSai{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.totalVendas{
+    text-align: center;
+
+}
+
+.inputTtlVend{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}

@@ -1,0 +1,74 @@
+.body{
+    background-color: rgb(247, 247, 247);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.nome{
+    text-align: center;
+}
+
+.inputNome{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.fabricante{
+    text-align: center;
+}
+
+
+.inputFabricante{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.qntdadeVendida{
+    text-align: center;
+}
+
+.inputQntdadeVend{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.codBarras{
+    text-align: center;
+}
+
+.inputCodBarras{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+.btnEnviar{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    color: aliceblue;
+    
+    text-align: center;
+}
