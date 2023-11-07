@@ -31,7 +31,6 @@ root.render(
     {/* <NavBar/> */}
     <BrowserRouter basename='/pi'>
       <Routes>
-        
         <Route path='/' element={<NavBar/>}/>
         <Route path='/sobre' element={<Sobre/>}/>
         <Route path='/cadastroCliente' element={<CadastroCliente/>}/>
