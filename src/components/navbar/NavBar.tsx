@@ -9,26 +9,26 @@ function NavBar(){
 
    
 
-        var endereco = document.location.href.split("/")[4];
-
-        var divTitulo = document.getElementById("titulo") as HTMLDivElement;
+        
+       // var divTitulo = document.getElementById("titulo") as HTMLDivElement;
         
        
        
        
         useEffect(() =>{
+            var endereco = document.location.href.split("/")[4];
     
-        if(endereco === "produto"){
-            var divProduto = document.getElementById("produto") as HTMLElement;
+        if(endereco === "cadastroProdutos"){
+            var divProduto = document.getElementById("produto") as HTMLDivElement;
            divProduto.classList.add("disableLink")
-        }else if(endereco === "cliente") {
-            var divCliente = document.getElementById("cliente") as HTMLElement;
+        }else if(endereco === "cadastroCliente") {
+            var divCliente = document.getElementById("cliente") as HTMLDivElement;
             divCliente.classList.add("disableLink")
         }else if(endereco === "sobre"){
-            var divSobre = document.getElementById("sobre") as HTMLElement;
+            var divSobre = document.getElementById("sobre") as HTMLDivElement;
            divSobre.classList.add("disableLink")
-        }else if(endereco === "vendedor"){
-            var divVendedor = document.getElementById("vendedor") as HTMLElement;
+        }else if(endereco === "cadastroVendedor"){
+            var divVendedor = document.getElementById("vendedor") as HTMLDivElement;
             divVendedor.classList.add("disableLink")
         }
 
@@ -42,13 +42,13 @@ function NavBar(){
     
 
     return(
-        {endereco === "cliente"  ? (<Link to = {"/cadastroCliente"} className="disebleLink">Cliente</Link>)
-        : Link to = {"/cadastroCliente"}>Cliente</Link>}
+        // {endereco === "cliente"  ? (<Link to = {"/cadastroCliente"} className="disebleLink">Cliente</Link>)
+        // : (<Link to = {"/cadastroCliente"}>Cliente</Link>)}
         
     <>
         <div className="FlexPai">
 
-            <div id="titulo">
+            {/* <div id="titulo">
                 titulo
             </div>
       
@@ -105,7 +105,7 @@ function NavBar(){
                 <label>
                 Iphone 6
                 </label>     
-                </div>
+                </div> */}
 
                 <div>
                     <div id="sobre">
@@ -115,18 +115,18 @@ function NavBar(){
                     </div>
 
                     <div id="cliente">
-                    <Link to={'/cadastroCliente'} id="cliente">
+                    <Link to={'/cadastroCliente'} >
                         Cliente
                     </Link>
                     </div>
                     <div id="vendedor">
                     <Imagem/>
-                   <Link to={'/cadastroVendedor'} id="vendedor">
+                   <Link to={'/cadastroVendedor'} >
                         Vendedor
                    </Link>
                    </div>
-                   <div id="produtos">
-                   <Link to={'/cadastroProdutos'} id="produtos">
+                   <div id="produto">
+                   <Link to={'/cadastroProdutos'} >
                         Produtos
                    </Link>
                    </div>
