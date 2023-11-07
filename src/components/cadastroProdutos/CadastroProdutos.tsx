@@ -6,6 +6,7 @@ import './CadastroProdutos.css';
 function CadastroProdutos(){
     return(
         <div className="body">
+            <NavBar/>
             <div className="nome">
                 <h5>Nome do produto:</h5>
             </div>

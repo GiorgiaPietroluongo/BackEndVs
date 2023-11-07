@@ -5,7 +5,9 @@ import './CadastroVendedor.css';
 
 function CadastroVendedor(){
     return(
+       
         <div className="body">
+             <NavBar/>
 
             <div className="nome">
                 <h5>Nome do vendedor:</h5>

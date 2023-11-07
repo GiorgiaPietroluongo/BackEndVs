@@ -17,6 +17,7 @@ import Mensagem from './components/mensagens/Mensagem';
 import CadastroCliente from './components/cadastroCliente/CadastroCliente';
 import CadastroVendedor from './components/cadastroVendedor/CadastroVendedor';
 import CadastroProdutos from './components/cadastroProdutos/CadastroProdutos';
+import Sobre from './components/sobre/Sobre';
 // import NavBarEstoque from './components/navBarEstoque/NavBarEstoque';
 
 
@@ -31,8 +32,8 @@ root.render(
     <BrowserRouter basename='/pi'>
       <Routes>
         
-      <Route path='/' element={<NavBar/>}/>
-        <Route path='/sobre' element={<Imagem/>}/>
+        <Route path='/' element={<NavBar/>}/>
+        <Route path='/sobre' element={<Sobre/>}/>
         <Route path='/cadastroCliente' element={<CadastroCliente/>}/>
         <Route path='/cadastroVendedor' element={<CadastroVendedor/>}/>
         <Route path='/cadastroProdutos' element={<CadastroProdutos/>}/>

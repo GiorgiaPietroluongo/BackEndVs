@@ -1,4 +1,10 @@
-.category{
+.disableLink{
+    pointer-events: none;
+}
+
+
+
+/* .category{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +38,7 @@
 
 }
 
+
 .descriptionNokia{
 
 }
@@ -46,4 +53,4 @@
 
 .descriptionIphone{
 
-}
+} */

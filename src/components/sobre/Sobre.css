@@ -1,0 +1,40 @@
+.body {
+    
+    
+   
+    text-align: center;
+    
+   
+    border-top: 80px solid #8b4d4d;
+     
+}
+
+/* Estilo para a seção "Sobre Nós" */
+.sobreNos h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* Estilo para as seções de informações de contato */
+.numCntt h5,
+.redesScs h5,
+.email h5 {
+
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+/* Estilo para a seção "Central de Dúvidas" */
+.centralDvds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

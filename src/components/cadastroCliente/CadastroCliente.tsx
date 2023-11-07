@@ -7,6 +7,7 @@ function CadastroCliente(){
 
     return(
         <div className="body">
+            <NavBar/>
             <div className="nome">
             <h5>Nome:</h5>
             </div>
