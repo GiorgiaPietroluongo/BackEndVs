@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from '../navbar/NavBar';
 import { Link } from 'react-router-dom';
 import './CadastroCliente.css';
+import '../../services/apiUser';
 
 function CadastroCliente(){
 
@@ -13,41 +14,41 @@ function CadastroCliente(){
             </div>
            
 
-            <div className="inputNome">
+            <div id="inputNome">
                 <input type="Nome" placeholder="Nome"/>
             </div>
-            <div className="inputLastName">
+            <div id="inputLastName">
                 <input type="Sobrenome" placeholder="Sobrenome"/>
             </div>
-            <div className="inputGenero">
+            <div id="inputGenero">
                 <input type="Gênero" placeholder="Gênero"/>
             </div>
 
-            <div className="datanasc">
+            <div id="datanasc">
                 <h5>Data de Nascimento</h5>
             </div>
 
-            <div className="inputData">
+            <div id="inputData">
                 <input type="dd/mm/aaaa" placeholder="dd/mm/aaaa"/>
             </div>
-            <div className="inputEmail">
+            <div id="inputEmail">
                 <input type="E-mail" placeholder="E-mail"/>
             </div>
-            <div className="inputEstado">
+            <div id="inputEstado">
                 <input type="Estado" placeholder="Estado"/>
                 <input type="Cidade" placeholder="Cidade"/>
             </div>
-            <div className="cpf">
+            <div id="cpf">
                 <h5>CPF</h5>
             </div>
 
-            <div className="inputCpf">
+            <div id="inputCpf">
                 <input type="000.000.000-00" placeholder="000.000.000-00"/>
             </div>
-            <div className="telefone">
+            <div id="telefone">
                 <h5>Telefone</h5>
             </div>
-            <div className="inputPhone">
+            <div id="inputPhone">
                 <input type="(00)00000 0000" placeholder="(00)00000 0000"/>
             </div>
 
